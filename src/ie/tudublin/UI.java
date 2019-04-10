@@ -2,7 +2,6 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
-import jdk.nashorn.internal.ir.ReturnNode;
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
@@ -10,6 +9,7 @@ import processing.data.TableRow;
 public class UI extends PApplet
 {	
 	ArrayList<Colour> colours = new ArrayList<Colour>();
+	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 
 	public void separate(int value)
 	{
@@ -41,13 +41,25 @@ public class UI extends PApplet
 	}
 
 	public void loadColours(){
-		Table table = loadTable("colous.csv", "header");
+		Table ColoursTable = loadTable("colous.csv", "header");
 
-		for (TableRow row : table.rows()) {
+		for (TableRow row : ColoursTable.rows()) {
 			colours.add(new Colour(row));
 
 		}
 
+	}
+
+	public void loadResistors(){
+		Table ResistorsTable = loadTable("resistors.csv", "header");
+
+		for (int i = 0; i < ResistorsTable.getRowCount(); i++) {
+			
+			Resistor r = new Resistor(ResistorsTable.getInt(i, 0));
+
+			resistors.add(r.)
+		}
+	
 	}
 
 	public void printColours(){
@@ -68,7 +80,7 @@ public class UI extends PApplet
 			}
 				
 		}
-		
+
 		return null;
 
 	}
