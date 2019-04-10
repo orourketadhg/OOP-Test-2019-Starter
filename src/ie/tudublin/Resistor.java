@@ -46,7 +46,7 @@ public class Resistor extends PApplet{
 		rect(x + 100, y - 50, 10, 100);
 
 		fill(0);
-		textSize(25);
+		textSize(22);
 		textAlign(CENTER, CENTER);
 		text(this.value, x + 300, y);
 

@@ -47,8 +47,12 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
+		TestResistorDrawing();
 
-		
+		//Colour c = colours.get(1);
+		//Resistor r = new Resistor(c.getValue());
+		//r.Render(c, 300, 300);
+
 	}
 
 	public void loadColours(){
@@ -95,6 +99,39 @@ public class UI extends PApplet
 		}
 
 		return null;
+
+	}
+
+	public void TestResistorDrawing(){
+		float x = 100;
+		float y = 100;
+
+		fill(255);
+        line(x, y, x + 50, y);
+        line(x + 50, y, x + 50, y - 50);
+		line(x + 50, y, x + 50, y + 50);
+		
+		line(x + 50, y - 50, x + 150, y - 50);
+		line(x + 50, y + 50, x + 150, y + 50);
+
+        line(x + 150, y, x + 150, y - 50);
+		line(x + 150, y, x + 150, y + 50);
+
+		line(x + 150, y, x + 200, y);
+
+		fill(255, 0, 0);
+		rect(x + 60, y - 50, 10, 100);
+
+		fill(0, 255, 0);
+		rect(x + 80, y - 50, 10, 100);
+		
+		fill(0, 0, 255);
+		rect(x + 100, y - 50, 10, 100);
+
+		fill(0);
+		textSize(22);
+		textAlign(CENTER, CENTER);
+		text("test", x + 300, y);
 
 	}
 
