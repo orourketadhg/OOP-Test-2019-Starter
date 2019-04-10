@@ -22,12 +22,33 @@ public class Resistor extends PApplet{
 
     }
 
-    public void Render(float x, float y){
-        fill(255);
-        line(x, y, x + 20, y);
-        line(x + 20, y, x + 20, y - 20);
-        line(x + 20, y, x + 20, y - 20);
+    public void Render(Colour c, float x, float y){
+		fill(255);
+        line(x, y, x + 50, y);
+        line(x + 50, y, x + 50, y - 50);
+		line(x + 50, y, x + 50, y + 50);
+		
+		line(x + 50, y - 50, x + 150, y - 50);
+		line(x + 50, y + 50, x + 150, y + 50);
 
+        line(x + 150, y, x + 150, y - 50);
+		line(x + 150, y, x + 150, y + 50);
+
+		line(x + 150, y, x + 200, y);
+
+		fill(c.getR(), 0, 0);
+		rect(x + 60, y - 50, 10, 100);
+
+		fill(0, c.getG(), 0);
+		rect(x + 80, y - 50, 10, 100);
+		
+		fill(0, 0, c.getB());
+		rect(x + 100, y - 50, 10, 100);
+
+		fill(0);
+		textSize(25);
+		textAlign(CENTER, CENTER);
+		text(this.value, x + 300, y);
 
     }
 
