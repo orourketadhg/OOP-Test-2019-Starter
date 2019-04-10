@@ -13,9 +13,9 @@ public class Colour {
     public Colour(TableRow row){
         this.Colour = row.getString("colour");
         this.r = row.getInt("r");
-        this.r = row.getInt("g");
+        this.g = row.getInt("g");
         this.r = row.getInt("b");
-        this.r = row.getInt("value");
+        this.value = row.getInt("value");
         
     }
 
