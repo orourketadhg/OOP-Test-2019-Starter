@@ -34,6 +34,7 @@ public class UI extends PApplet
 	{
 		loadColours();
 		printColours();
+		loadResistors();
 	}
 	
 	public void draw()
@@ -41,10 +42,12 @@ public class UI extends PApplet
 	}
 
 	public void loadColours(){
-		Table ColoursTable = loadTable("colous.csv", "header");
+		Table ColoursTable = new Table();
+		ColoursTable = loadTable("colours.csv", "header");
 
 		for (TableRow row : ColoursTable.rows()) {
-			colours.add(new Colour(row));
+			Colour c = new Colour(row);
+			colours.add(c);
 
 		}
 
@@ -57,7 +60,7 @@ public class UI extends PApplet
 			
 			Resistor r = new Resistor(ResistorsTable.getInt(i, 0));
 
-			resistors.add(r.)
+			resistors.add(r);
 		}
 	
 	}
