@@ -2,6 +2,7 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
+import jdk.nashorn.internal.ir.ReturnNode;
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
@@ -55,4 +56,21 @@ public class UI extends PApplet
 		}
 
 	}
+
+	public Colour findColour(int value){
+
+		for (int i = 0; i < colours.size(); i++) {
+			Colour c = colours.get(i);
+
+			if (c.getValue() == value){
+				return c;
+				
+			}
+				
+		}
+		
+		return null;
+
+	}
+
 }
