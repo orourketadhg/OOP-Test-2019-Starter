@@ -11,6 +11,9 @@ public class UI extends PApplet
 	ArrayList<Colour> colours = new ArrayList<Colour>();
 	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 
+	float Border = 100; 
+
+
 	public void separate(int value)
 	{
 		int hundreds = (value / 100);
@@ -47,7 +50,14 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
-		TestResistorDrawing();
+		TestResistorDrawing(100, 100);
+
+		for (int i = 1; i < 5; i++) {
+			// mapping for each reisiter
+			float m = map(i, 0, 4, Border , height - Border);
+
+			TestResistorDrawing(Border, m);
+		}
 
 		//Colour c = colours.get(1);
 		//Resistor r = new Resistor(c.getValue());
@@ -102,9 +112,9 @@ public class UI extends PApplet
 
 	}
 
-	public void TestResistorDrawing(){
-		float x = 100;
-		float y = 100;
+	public void TestResistorDrawing(float x, float y){
+		//float x = 100;
+		//float y = 100;
 
 		fill(255);
         line(x, y, x + 50, y);
