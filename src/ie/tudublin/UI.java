@@ -50,13 +50,13 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
-		TestResistorDrawing(100, 100);
+		//TestResistorDrawing(100, 100);
 
-		for (int i = 1; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			// mapping for each reisiter
 			float m = map(i, 0, 4, Border , height - Border);
 
-			TestResistorDrawing(Border, m);
+			//TestResistorDrawing(Border, m);
 		}
 
 		//Colour c = colours.get(1);
