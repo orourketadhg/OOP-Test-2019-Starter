@@ -18,8 +18,16 @@ public class Resistor extends PApplet{
         
     }
 
+    public Resistor(){
+
+    }
+
     public void Render(float x, float y){
+        fill(255);
         line(x, y, x + 20, y);
+        line(x + 20, y, x + 20, y - 20);
+        line(x + 20, y, x + 20, y - 20);
+
 
     }
 

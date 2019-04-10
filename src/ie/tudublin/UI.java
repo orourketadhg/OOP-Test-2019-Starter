@@ -32,13 +32,38 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
+		// load Colours
 		loadColours();
+
+		// Print Colours Array list
 		printColours();
+		
+		// load Resistors
 		loadResistors();
+
+		// testing findColour
+		System.out.println("\n" + findColour(7));
 	}
 	
 	public void draw()
-	{			
+	{	
+		float x = 100;
+		float y = 100; 
+
+		fill(255);
+        line(x, y, x + 50, y);
+        line(x + 50, y, x + 50, y - 50);
+		line(x + 50, y, x + 50, y + 50);
+		
+		line(x + 50, y - 50, x + 150, y - 50);
+		line(x + 50, y + 50, x + 150, y + 50);
+
+        line(x + 150, y, x + 150, y - 50);
+		line(x + 150, y, x + 150, y + 50);
+
+		line(x + 150, y, x + 200, y);
+
+
 	}
 
 	public void loadColours(){
